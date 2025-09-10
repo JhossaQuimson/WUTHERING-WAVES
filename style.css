@@ -66,3 +66,20 @@ footer {
   font-size: 14px;
   color: #aaa;
 }
+
+.grid { 
+  display: grid; gap: 20px; 
+}
+.chars { 
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+}
+.weps {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+}
+.item-img {
+  width: 100%; height: auto; border-radius: 8px; 
+}
+.small-text {
+  font-size: 0.9em; color: #ccc; 
+}
+
