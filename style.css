@@ -1,85 +1,128 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+/* Cyberpunk Theme for Wuthering Waves Fan Site */
+
+/* Font: Orbitron for futuristic look */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap');
+
+:root {
+  --bg-color: #0d0d0f;
+  --card-bg: #1a1a1f;
+  --neon-cyan: #00fff7;
+  --neon-pink: #ff00d9;
+  --neon-purple: #9d00ff;
+  --neon-green: #39ff14;
+  --text-light: #e6e6e6;
+}
+
+* {
   margin: 0;
   padding: 0;
-  background: #111;
-  color: #eee;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
 header {
-  background: #222;
-  padding: 15px;
   text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+  border-bottom: 2px solid var(--neon-pink);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 24px;
-  color: #ffcc00;
-}
-
-/* Navbar */
 nav {
-  background: #333;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  gap: 25px;
+  padding: 15px;
+  background: #111;
+  border-bottom: 2px solid var(--neon-purple);
 }
 
 nav a {
+  color: var(--neon-pink);
   text-decoration: none;
-  color: #eee;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ffcc00;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-pink);
 }
 
-/* Content */
 main {
-  padding: 20px;
-  max-width: 900px;
+  padding: 40px;
+  max-width: 1200px;
   margin: auto;
 }
 
-.card {
-  background: #222;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-pink);
 }
 
-.card h2 {
-  color: #ffcc00;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 2px solid var(--neon-purple);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.4s;
+  box-shadow: 0 0 10px var(--neon-purple);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-pink);
+}
+
+.item-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 2px solid var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+  transition: 0.3s;
+}
+
+.item-img:hover {
+  box-shadow: 0 0 20px var(--neon-pink), 0 0 30px var(--neon-cyan);
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--neon-pink);
+  margin-bottom: 10px;
+}
+
+.small-text {
+  font-size: 0.9rem;
+  color: var(--neon-green);
+  margin-bottom: 10px;
 }
 
 footer {
   text-align: center;
-  padding: 15px;
-  background: #222;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #aaa;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 2px solid var(--neon-pink);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-pink);
 }
-
-.grid { 
-  display: grid; gap: 20px; 
-}
-.chars { 
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
-}
-.weps {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
-}
-.item-img {
-  width: 100%; height: auto; border-radius: 8px; 
-}
-.small-text {
-  font-size: 0.9em; color: #ccc; 
-}
-
